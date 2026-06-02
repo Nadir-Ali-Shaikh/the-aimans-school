@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap");
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-sky: var(--sky);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-elegant: 0 20px 50px -15px rgba(5, 14, 26, 0.45);
+  --shadow-gold: 0 12px 40px -12px color-mix(in oklab, var(--gold) 50%, transparent);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Brand Navy Background (exact color of the navbar) */
+  --background: oklch(0.22 0.06 258);
+  --foreground: oklch(0.99 0.005 250);
+
+  /* Lighter navy shade for excellent contrast on cards and popovers */
+  --card: oklch(0.26 0.05 258);
+  --card-foreground: oklch(0.99 0.005 250);
+  --popover: oklch(0.26 0.05 258);
+  --popover-foreground: oklch(0.99 0.005 250);
+
+  /* White acts as the brand primary color for buttons, links, and selections */
+  --primary: oklch(0.99 0.005 250);
+  --primary-foreground: oklch(0.22 0.06 258);
+
+  /* Lighter navy for alternating page sections */
+  --secondary: oklch(0.26 0.05 258);
+  --secondary-foreground: oklch(0.99 0.005 250);
+
+  --muted: oklch(0.26 0.05 258);
+  --muted-foreground: oklch(0.92 0.01 250);
+
+  --accent: oklch(0.3 0.06 258);
+  --accent-foreground: oklch(0.99 0.005 250);
+
+  /* White replacing Gold for luxury branding */
+  --gold: oklch(0.99 0.005 250);
+  --gold-foreground: oklch(0.22 0.06 258);
+
+  /* #38BDF8 sky */
+  --sky: oklch(0.78 0.13 230);
+
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.005 250);
+
+  /* Semi-transparent borders look extremely refined on dark backgrounds */
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.99 0.005 250);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.06 258) 0%, oklch(0.28 0.07 250) 60%, oklch(0.35 0.08 240) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.99 0.005 250), oklch(0.95 0.01 250));
+}
+
+.dark {
+  --background: oklch(0.22 0.06 258);
+  --foreground: oklch(0.99 0.005 250);
+  --card: oklch(0.26 0.05 258);
+  --card-foreground: oklch(0.99 0.005 250);
+  --popover: oklch(0.26 0.05 258);
+  --popover-foreground: oklch(0.99 0.005 250);
+  --primary: oklch(0.99 0.005 250);
+  --primary-foreground: oklch(0.22 0.06 258);
+  --secondary: oklch(0.26 0.05 258);
+  --secondary-foreground: oklch(0.99 0.005 250);
+  --muted: oklch(0.26 0.05 258);
+  --muted-foreground: oklch(0.92 0.01 250);
+  --accent: oklch(0.3 0.06 258);
+  --accent-foreground: oklch(0.99 0.005 250);
+  --gold: oklch(0.99 0.005 250);
+  --gold-foreground: oklch(0.22 0.06 258);
+  --sky: oklch(0.78 0.13 230);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.005 250);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.99 0.005 250);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .container-prose { max-width: 1200px; margin-inline: auto; padding-inline: 1.25rem; }
+  .glass {
+    background: color-mix(in oklab, white 65%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid color-mix(in oklab, white 50%, transparent);
+  }
+  .glass-dark {
+    background: color-mix(in oklab, var(--primary) 70%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid color-mix(in oklab, white 12%, transparent);
+  }
+  .gold-underline {
+    background-image: linear-gradient(var(--foreground), var(--foreground));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    padding-bottom: 4px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+  }
+  
+  /* GPU acceleration helper for butter-smooth animations */
+  .will-change-anim {
+    will-change: transform, opacity;
+  }
+
+  /* Performance optimization: Skips rendering of off-screen elements until close to viewport */
+  .content-lazy-render {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
+
+  .animate-fade-up { 
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; 
+    will-change: transform, opacity;
+  }
+  
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes preloaderIntro {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(15px);
+      filter: blur(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes preloaderShine {
+    0% {
+      transform: translateX(-150%) skewX(-25deg);
+    }
+    50% {
+      transform: translateX(150%) skewX(-25deg);
+    }
+    100% {
+      transform: translateX(150%) skewX(-25deg);
+    }
+  }
+
+  @keyframes preloaderBar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-preloader-intro {
+    animation: preloaderIntro 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-preloader-shine {
+    animation: preloaderShine 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  }
+
+  .animate-preloader-bar {
+    animation: preloaderBar 2.0s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+
+  /* Smooth reveal animation classes used with ScrollReveal component */
+  .transition-premium {
+    transition: all 750ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
