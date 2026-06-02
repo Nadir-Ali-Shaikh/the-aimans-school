@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aiman's School Umerkot | Premier English-Medium School & College</title>
+  <meta name="description" content="Welcome to The Aiman's School Umerkot — academic excellence from Montessori to Intermediate with smart classes, Islamic values and experienced faculty.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for offline/cdn lookup -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B1F3A',
+            gold: '#D4AF37',
+            sky: '#38BDF8',
+            secondaryBg: '#F3F4F6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          boxShadow: {
+            elegant: '0 20px 60px -20px rgba(11, 31, 58, 0.15)',
+            gold: '0 12px 40px -12px rgba(212, 175, 55, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B1F3A; /* Navy Navbar color! */
+      color: #FAFAFA; /* Cream/white text */
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.02em;
+      color: #FAFAFA !important;
+    }
+
+    .gold-underline {
+      background-image: linear-gradient(#FAFAFA, #FAFAFA) !important;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 3px;
+      padding-bottom: 4px;
+      filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+    }
+
+    .glass {
+      background: rgba(11, 31, 58, 0.85) !important;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* Global Dark Theme Overrides for Static Page Legibility */
+    .bg-white {
+      background-color: #0B1F3A !important;
+    }
+    .bg-gray-50 {
+      background-color: #152A4A !important;
+    }
+    .bg-secondaryBg {
+      background-color: #152A4A !important;
+    }
+    .border-gray-200, .border-gray-100 {
+      border-color: rgba(255, 255, 255, 0.12) !important;
+    }
+    .text-gray-500, .text-gray-600 {
+      color: #94A3B8 !important; /* Soft light slate text */
+    }
+    .text-gray-400 {
+      color: #CBD5E1 !important;
+    }
+    .text-gray-700 {
+      color: #E2E8F0 !important;
+    }
+    .text-slate-800 {
+      color: #FAFAFA !important;
+    }
+    .text-primary {
+      color: #FAFAFA !important; /* White logo headers */
+    }
+    .text-gold {
+      color: #FAFAFA !important;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+    }
+    .divide-gray-200 > * + * {
+      border-color: rgba(255, 255, 255, 0.12) !important;
+    }
+    input, textarea {
+      color: #FAFAFA !important;
+    }
+    #consoleCard {
+      background-color: #152A4A !important;
+      border-color: rgba(255, 255, 255, 0.15) !important;
+    }
+    #consoleCard p, #consoleCard span {
+      color: #E2E8F0 !important;
+    }
+    #consoleCard code {
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      color: #FAFAFA !important;
+    }
+
+    /* Navbar Navigation lighting glow hover effect */
+    header nav a {
+      color: rgba(255, 255, 255, 0.7) !important;
+      transition: all 0.3s ease !important;
+    }
+    header nav a:hover {
+      color: #FAFAFA !important;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* Glowing White CTA buttons with Navy text */
+    .bg-gold {
+      background-color: #FAFAFA !important;
+      color: #0B1F3A !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1) !important;
+    }
+    .bg-gold:hover {
+      background-color: #FAFAFA !important;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) !important;
+      transform: scale(1.02) !important;
+    }
+    .bg-gold i, .bg-gold span {
+      color: #0B1F3A !important;
+    }
+
+    /* Principal icon / card accents */
+    .text-gold {
+      color: #FAFAFA !important;
+    }
+    .bg-gold\/20 {
+      background-color: rgba(255, 255, 255, 0.12) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .shadow-elegant {
+      box-shadow: 0 20px 50px -15px rgba(5, 14, 26, 0.4) !important;
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Pulse effect for local runner badge in glowing white */
+    .pulse-badge {
+      animation: pulse 2s infinite;
+      background-color: #FAFAFA !important;
+      color: #0B1F3A !important;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+    @keyframes preloaderIntro {
+      0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(15px);
+        filter: blur(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes preloaderShine {
+      0% {
+        transform: translateX(-150%) skewX(-25deg);
+      }
+      50% {
+        transform: translateX(150%) skewX(-25deg);
+      }
+      100% {
+        transform: translateX(150%) skewX(-25deg);
+      }
+    }
+
+    @keyframes preloaderBar {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .animate-preloader-intro {
+      animation: preloaderIntro 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .animate-preloader-shine {
+      animation: preloaderShine 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    }
+
+    .animate-preloader-bar {
+      animation: preloaderBar 2.0s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- PRELOADER SPLASH SCREEN -->
+  <div id="preloader" style="position: fixed; inset: 0; z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #0B1F3A; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+    <!-- Background elegant lighting glow -->
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, transparent 70%); pointer-events: none;"></div>
+    
+    <div class="animate-preloader-intro" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 24rem; padding-left: 1.5rem; padding-right: 1.5rem; text-align: center;">
+      <!-- Glowing aura ring behind logo -->
+      <div style="position: absolute; height: 16rem; width: 16rem; border-radius: 9999px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%); filter: blur(24px); animation: pulse 2s infinite;"></div>
+      
+      <!-- School Logo -->
+      <div style="position: relative; margin-bottom: 2rem; overflow: hidden; border-radius: 1rem; padding: 1.25rem; background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 0 50px rgba(255,255,255,0.05);">
+        <img
+          src="./logo.png"
+          alt="The Aiman's School Logo"
+          style="width: 15rem; height: 15rem; object-fit: contain; filter: drop-shadow(0 4px 20px rgba(255,255,255,0.15));"
+          width="240"
+          height="240"
+        />
+        <!-- Golden sweep reflection line -->
+        <div class="animate-preloader-shine" style="position: absolute; inset: 0; background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent); transform: translateX(-150%) skewX(-25deg);"></div>
+      </div>
+
+      <!-- Brand tagline progress indicator -->
+      <div style="width: 12rem; height: 2px; background-color: rgba(255,255,255,0.1); border-radius: 9999px; overflow: hidden; position: relative; margin-bottom: 1rem;">
+        <div class="animate-preloader-bar" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background-color: white; border-radius: 9999px;"></div>
+      </div>
+      
+      <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.35em; color: rgba(255,255,255,0.7); font-weight: 600; display: inline-block;">
+        LEARN • LEAD • ACHIEVE
+      </span>
+    </div>
+  </div>
+
+  <script>
+    // Premium preloader JS controller
+    (function() {
+      const preloader = document.getElementById("preloader");
+      document.body.style.overflow = "hidden";
+      
+      // Start fade out sequence at 1.0 seconds
+      setTimeout(function() {
+        if (preloader) {
+          preloader.style.opacity = "0";
+          preloader.style.transform = "scale(1.08) translateY(0)";
+          preloader.style.filter = "blur(12px)";
+          preloader.style.pointerEvents = "none";
+        }
+      }, 1000);
+      
+      // Completely remove preloader from view and release scrolling at 1.5 seconds
+      setTimeout(function() {
+        if (preloader) {
+          preloader.style.display = "none";
+        }
+        document.body.style.overflow = "";
+      }, 1500);
+    })();
+  </script>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-50 w-full glass border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-full overflow-hidden bg-white/5 border border-white/15 p-0.5 shadow-lg">
+          <img src="./logo.png" alt="The Aiman's School Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <span class="text-lg font-bold text-primary tracking-tight block leading-tight font-display">THE AIMAN'S SCHOOL</span>
+          <span class="text-[10px] text-gold font-bold tracking-widest uppercase block">Umerkot Campus</span>
+        </div>
+      </div>
+      
+      <!-- NAV ITEMS -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-primary">
+        <a href="#home" class="hover:text-gold transition">Home</a>
+        <a href="#about" class="hover:text-gold transition">About Us</a>
+        <a href="#academics" class="hover:text-gold transition">Academics</a>
+        <a href="#facilities" class="hover:text-gold transition">Facilities</a>
+        <a href="#notices" class="hover:text-gold transition">Notices</a>
+        <a href="#gallery" class="hover:text-gold transition">Gallery</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#admissions" class="hidden sm:inline-flex px-5 py-2.5 bg-gold text-primary font-semibold text-xs uppercase tracking-wider rounded shadow-md hover:bg-yellow-500 transition">
+          Apply Now
+        </a>
+        <button onclick="toggleConsole()" class="px-4 py-2.5 bg-primary text-white text-xs font-semibold uppercase tracking-wider rounded hover:bg-slate-800 transition">
+          <i class="fa-solid fa-server mr-1.5 text-gold"></i> Run App
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-primary text-white">
+    <!-- Overlay Gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/85 via-[#0B1F3A]/60 to-transparent z-10"></div>
+    
+    <!-- Hero Image (Using high-quality fallback placeholder) -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop" alt="The Aiman's School campus" class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20 py-24 w-full">
+      <div class="max-w-3xl animate-fade-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full border border-white/20 text-xs font-medium text-gold mb-6 uppercase tracking-wider">
+          <i class="fa-solid fa-sparkles"></i> Montessori to Higher Secondary
+        </div>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display mb-6">
+          Shaping Tomorrow's Leaders Through <span class="text-gold">Education</span> of Distinction
+        </h1>
+        <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
+          The Aiman's School Umerkot blends modern academics, smart classrooms, Islamic values, and a nurturing environment to prepare students for excellence and lifetime achievements.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#admissions" class="px-7 py-4 bg-white text-[#0B1F3A] font-bold text-sm tracking-wider uppercase rounded shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:bg-white/95 hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+            Apply for Admission <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#about" class="px-7 py-4 bg-white/10 border-2 border-white text-white font-bold text-sm tracking-wider uppercase rounded shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:bg-white hover:text-[#0B1F3A] hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:scale-[1.02] transition-all duration-300">
+            Discover Our School
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING STATS SECTION -->
+  <section class="relative -mt-16 z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass rounded-3xl shadow-elegant grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-200 overflow-hidden bg-white/80">
+      <div class="p-6 md:p-8 text-center">
+        <div class="text-3xl sm:text-4xl font-bold text-primary font-display">1,200+</div>
+        <div class="mt-2 text-xs sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Students Enrolled</div>
+      </div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="text-3xl sm:text-4xl font-bold text-primary font-display">60+</div>
+        <div class="mt-2 text-xs sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Qualified Teachers</div>
+      </div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="text-3xl sm:text-4xl font-bold text-primary font-display">98%</div>
+        <div class="mt-2 text-xs sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Success Success Rate</div>
+      </div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="text-3xl sm:text-4xl font-bold text-primary font-display">15+</div>
+        <div class="mt-2 text-xs sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Years of Excellence</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST NOTICES / ANNOUNCEMENT BOARD -->
+  <section id="notices" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-gold uppercase tracking-[0.2em]">Latest Updates</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-2">School <span class="gold-underline">Announcements</span></h2>
+        <p class="text-gray-500 mt-4 text-sm sm:text-base">Important notifications and circulars for parents, teachers, and students.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Notice 1 (Important) -->
+        <div class="group relative rounded-3xl border border-red-200 bg-red-50/20 p-8 hover:shadow-elegant transition overflow-hidden">
+          <div class="absolute top-0 right-0 px-4 py-1.5 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-bl-2xl">
+            High Priority
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 text-lg">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div>
+              <span class="text-xs text-red-500 font-bold block mb-1">May 28, 2026</span>
+              <h3 class="font-bold text-lg text-primary leading-tight group-hover:text-gold transition">Admissions Open for Session 2026-2027</h3>
+              <p class="text-gray-600 mt-3 text-sm leading-relaxed">Online application form is now active. Parents are advised to submit applications before the due date to secure seats.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notice 2 -->
+        <div class="group relative rounded-3xl border border-gray-200 bg-white p-8 hover:shadow-elegant transition overflow-hidden">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gold/10 text-primary flex items-center justify-center flex-shrink-0 text-lg">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div>
+              <span class="text-xs text-gray-400 font-bold block mb-1">May 24, 2026</span>
+              <h3 class="font-bold text-lg text-primary leading-tight group-hover:text-gold transition">Final Examination Results Declared</h3>
+              <p class="text-gray-600 mt-3 text-sm leading-relaxed">The academic results for the current academic session have been published. Students can view results via the online results portal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="about" class="py-24 bg-secondaryBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-gold uppercase tracking-[0.2em]">Why Choose Us</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-2">An Environment Where <span class="gold-underline">Students Flourish</span></h2>
+        <p class="text-gray-500 mt-4 text-sm sm:text-base">We provide quality education supported by world-class infrastructure and dedicated spiritual values.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-desktop"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">Smart Classrooms</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">Equipped with interactive projectors, audio-visual setups, and multimedia resources for immersive learning.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">Safe & Secure Campus</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">24/7 CCTV surveillance, strictly gated checkpoints, and trained security personnel for utmost safety.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">Experienced Faculty</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">Highly trained educational specialists dedicated to character building and top grade scores.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-kaaba"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">Islamic Values</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">Nurturing ethical lifestyles, teaching Sunnah behaviors, daily prayers guidance, and strong moral standards.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">Co-Curriculars</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">Active sports tournaments, speech debates, science exhibitions, and competitive events.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="group p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-elegant hover:-translate-y-1.5 transition-all duration-300">
+          <div class="h-12 w-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-gold group-hover:text-primary transition-colors text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-primary">College Section</h3>
+          <p class="mt-3 text-sm text-gray-500 leading-relaxed">Providing high standard intermediate preparations in Pre-Medical, Pre-Engineering, and Commerce fields.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAL MESSAGE -->
+  <section class="py-24 bg-primary text-white overflow-hidden relative">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-sky/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative max-w-md mx-auto lg:mx-0">
+          <div class="absolute -inset-4 bg-gold/20 rounded-3xl -rotate-2"></div>
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=600&auto=format&fit=crop" alt="Principal of The Aiman's School" class="relative rounded-3xl shadow-elegant w-full object-cover aspect-[4/5] object-top">
+        </div>
+        
+        <div>
+          <span class="text-xs font-bold text-gold uppercase tracking-[0.25em] block mb-3">A Message from the Principal</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mb-6">Education is the most powerful gift we can offer the next generation.</h2>
+          <i class="fa-solid fa-quote-left text-4xl text-gold/30 mb-4 block"></i>
+          <p class="text-gray-300 leading-relaxed text-base sm:text-lg mb-6 italic">
+            "At The Aiman's School Umerkot, we believe each child carries a unique spark. Our purpose is to nurture this spark into a blazing flame of intelligence, ethics, and values. We invite parents to join us in establishing a stellar educational journey that guarantees success in both academic life and character development."
+          </p>
+          <div>
+            <div class="font-bold text-lg text-white">Prof. Abdul Qadeer Malik</div>
+            <div class="text-sm text-gold font-medium uppercase tracking-wider">Principal, The Aiman's School Umerkot</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS GALLERY -->
+  <section id="facilities" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-gold uppercase tracking-[0.25em]">Visual Tour</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-2">A Place Built for <span class="gold-underline">Learning</span></h2>
+        <p class="text-gray-500 mt-4 text-sm sm:text-base">Explore our state-of-the-art facilities designed for academic superiority.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-md">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" alt="Smart Classrooms" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-xs font-bold text-white/85 uppercase tracking-wider block mb-1">Interactive Learning</span>
+            <h4 class="font-bold text-lg">Smart Classrooms</h4>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-md">
+          <img src="https://images.unsplash.com/photo-1518152006812-cdff28b66480?q=80&w=800&auto=format&fit=crop" alt="Physics & Computer Lab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-xs font-bold text-white/85 uppercase tracking-wider block mb-1">Practical Science</span>
+            <h4 class="font-bold text-lg">Computer & Science Labs</h4>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-md">
+          <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop" alt="Library" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-xs font-bold text-white/85 uppercase tracking-wider block mb-1">Knowledge Hub</span>
+            <h4 class="font-bold text-lg">Rich Library</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS CTA SECTION -->
+  <section id="admissions" class="py-20 bg-secondaryBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-primary text-white p-10 md:p-16 shadow-elegant">
+        <div class="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-sky/15 blur-3xl"></div>
+        
+        <div class="relative grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="inline-block px-3 py-1 bg-gold text-primary font-bold text-[10px] uppercase tracking-widest rounded mb-4">Admissions Open</span>
+            <h3 class="text-3xl sm:text-4xl font-bold font-display leading-tight">Join a community that believes in your child's future.</h3>
+            <p class="mt-4 text-gray-300">Applications for the new session are now open online. Reserve your seat and plan a premium education today.</p>
+          </div>
+          <div class="flex md:justify-end gap-3.5 flex-wrap">
+            <a href="#admissions" class="px-6 py-3.5 bg-white text-[#0B1F3A] font-bold rounded shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:bg-white/95 hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] hover:scale-[1.02] transition-all duration-300">
+              Start Application
+            </a>
+            <a href="#contact" class="px-6 py-3.5 bg-white/10 border-2 border-white text-white font-bold rounded shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:bg-white hover:text-[#0B1F3A] hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:scale-[1.02] transition-all duration-300">
+              Talk to Admissions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-gold uppercase tracking-[0.25em]">Parents Voice</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-primary mt-2">Trusted by Families Across Umerkot</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="rounded-3xl bg-gray-50 border border-gray-100 p-8 shadow-sm">
+          <i class="fa-solid fa-quote-left text-2xl text-gold/30 mb-4 block"></i>
+          <p class="text-gray-600 leading-relaxed italic">"The teachers genuinely care about every child. My daughter's confidence has grown beyond measure since she joined Montessori."</p>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <div class="font-bold text-primary">Aisha Rasheed</div>
+            <div class="text-xs text-gray-400">Parent, Grade 5</div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="rounded-3xl bg-gray-50 border border-gray-100 p-8 shadow-sm">
+          <i class="fa-solid fa-quote-left text-2xl text-gold/30 mb-4 block"></i>
+          <p class="text-gray-600 leading-relaxed italic">"A perfect balance of modern education and Islamic values. Highly recommended for any family looking for character development in Umerkot."</p>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <div class="font-bold text-primary">Imran Khan</div>
+            <div class="text-xs text-gray-400">Parent, Grade 8</div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="rounded-3xl bg-gray-50 border border-gray-100 p-8 shadow-sm">
+          <i class="fa-solid fa-quote-left text-2xl text-gold/30 mb-4 block"></i>
+          <p class="text-gray-600 leading-relaxed italic">"Smart classrooms, rich science laboratories, and high standards of study. Best decision we made for our son's board matric preparation."</p>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <div class="font-bold text-primary">Dr. Sana Memon</div>
+            <div class="text-xs text-gray-400">Parent, Grade 10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-24 bg-secondaryBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <span class="text-xs font-bold text-gold uppercase tracking-[0.25em] block mb-3">Connect With Us</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-primary">We Are Here To <span class="gold-underline">Help You</span></h2>
+          <p class="text-gray-500 mt-4 leading-relaxed">Have any questions about admission process, fees structure, or intermediate sections? Send us an inquiry.</p>
+          
+          <div class="mt-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-primary text-gold flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 uppercase tracking-widest font-bold">Address</div>
+                <div class="font-bold text-primary">Near Thar Highway, Umerkot, Sindh, Pakistan</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-primary text-gold flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 uppercase tracking-widest font-bold">Phone Number</div>
+                <div class="font-bold text-primary">+92 (333) 251-1234</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-primary text-gold flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 uppercase tracking-widest font-bold">Email Support</div>
+                <div class="font-bold text-primary">info@theaimansschool.edu.pk</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-3xl p-8 shadow-elegant border border-gray-100">
+          <h3 class="text-2xl font-bold text-primary mb-6">Send An Inquiry Form</h3>
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been saved successfully.');">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Your Full Name</label>
+              <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-gold" required>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Your Email</label>
+              <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-gold" required>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Message</label>
+              <textarea rows="4" placeholder="Type your query here..." class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-gold" required></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 bg-primary text-white font-bold text-sm tracking-wider uppercase rounded-xl hover:bg-slate-800 transition">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-gray-400 py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-gold">
+          <i class="fa-solid fa-graduation-cap text-xl"></i>
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-bold text-white block">THE AIMAN'S SCHOOL UMERKOT</span>
+          <span class="text-[9px] text-gold uppercase tracking-widest block font-bold">Academic Excellence & Values</span>
+        </div>
+      </div>
+      <div class="text-xs text-gray-500">
+        &copy; 2026 The Aiman's School Umerkot. All Rights Reserved. Designed with <i class="fa-solid fa-heart text-red-500"></i> in Lovable.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CONSOLE CONTROLLER MODAL (EXPLAINING HOW TO RUN REACT APP) -->
+  <div id="consoleModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 max-w-lg w-full mx-4 relative transform scale-90 transition-transform duration-300" id="consoleCard">
+      <button onclick="toggleConsole()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 text-lg">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="h-12 w-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-circle-play"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-primary font-display">Start Full React Server</h3>
+          <span class="text-xs text-gold uppercase font-bold tracking-wider">Windows Automation Assistant</span>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-sm text-gray-600 leading-relaxed">
+          یہ فائل (`index.html`) ایک خوبصورت <strong>جامد (Static) پریویو</strong> ہے جس کو آپ لوکلی ڈبل کلک کر کے فوری دیکھ سکتے ہیں۔
+        </p>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          مکمل متحرک (Dynamic) ایڈمن ڈیش بورڈ، رزلٹ سرچ انجن، اور سپابیس (Supabase) ڈیٹا بیس کے ساتھ ویب سائٹ چلانے کے لیے:
+        </p>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 space-y-3">
+          <div class="flex gap-3 text-sm">
+            <span class="h-6 w-6 rounded-full bg-gold text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-gray-700">اپنے پروجیکٹ کے فولڈر <code>d:\web\Loveable aimns</code> میں جائیں۔</span>
+          </div>
+          <div class="flex gap-3 text-sm">
+            <span class="h-6 w-6 rounded-full bg-gold text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-gray-700">وہاں موجود فائل <strong><code>run-local.bat</code></strong> پر ڈبل کلک کریں۔</span>
+          </div>
+          <div class="flex gap-3 text-sm">
+            <span class="h-6 w-6 rounded-full bg-gold text-primary font-bold text-xs flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-gray-700">یہ تمام پیکجز انسٹال کر کے خودکار طور پر سرور کو <code>http://localhost:3000</code> پر چلا دے گی۔</span>
+          </div>
+        </div>
+
+        <div class="pt-4 flex gap-2">
+          <button onclick="toggleConsole()" class="flex-1 py-3 bg-primary text-white font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-slate-800 transition">
+            Close & Preview Page
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CONSOLE TOGGLER BADGE -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button onclick="toggleConsole()" class="pulse-badge h-14 w-14 rounded-full bg-gold text-primary shadow-2xl flex items-center justify-center hover:bg-yellow-500 hover:scale-105 transition-all text-xl cursor-pointer">
+      <i class="fa-solid fa-server"></i>
+    </button>
+  </div>
+
+  <script>
+    function toggleConsole() {
+      const modal = document.getElementById('consoleModal');
+      const card = document.getElementById('consoleCard');
+      if (modal.classList.contains('pointer-events-none')) {
+        modal.classList.remove('pointer-events-none', 'opacity-0');
+        card.classList.remove('scale-90');
+        card.classList.add('scale-100');
+      } else {
+        modal.classList.add('pointer-events-none', 'opacity-0');
+        card.classList.remove('scale-100');
+        card.classList.add('scale-90');
+      }
+    }
+  </script>
+</body>
+</html>
